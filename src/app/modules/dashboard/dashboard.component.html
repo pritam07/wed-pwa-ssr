@@ -1,3 +1,14 @@
 <p>
   dashboard works!
 </p>
+<div class="right" *ngIf="tutorials$">
+
+  <h3>Tutorials</h3>
+  <ul>
+    <li (click)="delTutorial(tutorial.name)" *ngFor="let tutorial of tutorials$ | async">
+       <a [href]="tutorial.name" target="_blank">{{ tutorial.name }}</a>
+      <a [href]="tutorial.url" target="_blank">{{ tutorial.url }}</a>
+    </li>
+  </ul>
+
+</div>
