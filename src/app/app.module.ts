@@ -9,6 +9,9 @@ import {CommonComponent} from './modules/common/common.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { NgxsModule } from '@ngxs/store';
+import { TutorialState } from './state/tutorial.state';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,10 @@ import { environment } from '../environments/environment';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     HomeModule,
     appRouter,
-    
+    SharedModule,
+    NgxsModule.forRoot([
+      TutorialState
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
