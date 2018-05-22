@@ -5,6 +5,7 @@ import { appRouter } from './app.router';
 
 import { AppComponent } from './app.component';
 import { HomeModule} from './modules/home/home.module';
+import {SharedModule} from './modules/shared/shared.module';
 import {CommonComponent} from './modules/common/common.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
