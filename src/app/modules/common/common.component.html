@@ -1,12 +1,22 @@
-<p>
-  common works!
-</p>
-<div class="left">
+<!-- <div class="left">
 
   <input type="text" placeholder="name" #name>
   <input type="text" placeholder="url" #url>
 
   <button (click)="addTutorial(name.value,url.value)">Add a Tutorial</button>
+</div> -->
+<div class="main-menu">
+<mat-toolbar>  
+  <mat-toolbar-row>
+    <div class="menu-box">
+       <div class="logo-container">App</div>
+       <div class="right-menu">
+          <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>  
+     </div>  
+    </div>    
+  </mat-toolbar-row>
+</mat-toolbar>
+
 </div>
 
 <router-outlet></router-outlet>
