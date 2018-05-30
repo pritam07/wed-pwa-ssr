@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { appRouter } from './app.router';
 
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { TutorialState } from './state/tutorial.state';
       appId: 'weddings' 
     }),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    FlexLayoutModule,
     HomeModule,
     appRouter,
     SharedModule,
