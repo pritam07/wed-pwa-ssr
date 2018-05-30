@@ -11,3 +11,22 @@
 .logo-container {
   flex:0 0 1;
 }
+.common-header { grid-area: header; }
+.common-menu { grid-area: menu; }
+.common-body { grid-area: main; }
+.common-footer { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header'
+    'menu main main main main'
+    'menu footer footer footer footer';
+  grid-gap: 10px;
+  /* background-color: #2196F3; */
+  /* padding: 10px; */
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center; 
+}
