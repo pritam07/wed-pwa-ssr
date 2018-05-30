@@ -5,18 +5,31 @@
 
   <button (click)="addTutorial(name.value,url.value)">Add a Tutorial</button>
 </div> -->
-<div class="main-menu">
+
+<div class="main-menu grid-container">
+  <div class="common-header">
 <mat-toolbar>  
   <mat-toolbar-row>
-    <div class="menu-box">
-       <div class="logo-container">App</div>
-       <div class="right-menu">
+    <div class="menu-box" fxLayout="row"	    
+	     fxFlex>
+       <div class="logo-container" 
+fxFlex fxLayoutAlign="start">App</div>
+       <div class="right-menu" fxFlex fxLayoutAlign="end">
           <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>  
      </div>  
     </div>    
   </mat-toolbar-row>
 </mat-toolbar>
-
+  </div>
+   <div class="common-menu">Menu</div>
+  <div class="common-body"><router-outlet></router-outlet></div>   
+  <div class="common-footer">Footer</div>
 </div>
 
-<router-outlet></router-outlet>
+
+<!-- <div class="grid-container">
+  <div class="common-header">Header</div>
+  <div class="common-menu">Menu</div>
+  <div class="common-body">Main</div>   
+  <div class="common-footer">Footer</div>
+</div> -->
