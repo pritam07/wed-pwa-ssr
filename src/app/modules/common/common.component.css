@@ -1,4 +1,4 @@
-.main-menu .mat-toolbar-multiple-rows{     
+/* .main-menu .mat-toolbar-multiple-rows{     
       border-bottom: 2px solid #ff9900;
       background: #fff;
       box-shadow: 0px 0px 10px #ccc 0px 0px 10px #eee; 
@@ -12,7 +12,11 @@
   flex:0 0 1;
 }
 .common-header { grid-area: header; }
-.common-menu { grid-area: menu; }
+.common-menu {
+   grid-area: menu; 
+   height: calc(100vh - 67px);
+   background: #eee !important;   
+  }
 .common-body { grid-area: main; }
 .common-footer { grid-area: footer; }
 
@@ -22,11 +26,61 @@
     'header header header header header'
     'menu main main main main'
     'menu footer footer footer footer';
-  grid-gap: 10px;
-  /* background-color: #2196F3; */
-  /* padding: 10px; */
+  
 }
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center; 
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+ */
+
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+.main-menu {
+  border-bottom: 2px solid #ff9900;
+  background: #fff;
+  box-shadow: 0px 0px 10px #ccc 0px 0px 10px #eee;
+}
+
+.menu-box .mat-drawer.mat-drawer-side {
+    z-index: 2;
+    min-width: 177px;
+    /* text-align: center; */
+    /* border-right: 1px solid #dcc; */
+    border-right: 1px solid #e4e4e4;
+    /* border-bottom: 2px solid #ff9900; */
+    background: #f9f9f9;
+    /* box-shadow: 0px 0px 0px #eee; */
+}
+.main-body {
+  padding: 20px;
 }
