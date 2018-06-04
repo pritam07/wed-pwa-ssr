@@ -1,6 +1,4 @@
-<p>
-  dashboard works!
-</p>
+
 <!-- <div class="right" *ngIf="tutorials$">
 
   <h3>Tutorials</h3>
@@ -12,3 +10,13 @@
   </ul>
 
 </div> -->
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-full-width">
+    <input placeholder="Name" matInput type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+    <!-- <input matInput placeholder="Email" formControlName="name"> -->
+    <mat-error *ngIf="f.name.errors">
+            Name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>
