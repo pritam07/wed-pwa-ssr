@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { appRouter } from './app.router';
@@ -22,6 +23,7 @@ import { TutorialState } from './state/tutorial.state';
     BrowserModule.withServerTransition({ 
       appId: 'weddings' 
     }),
+    BrowserAnimationsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     FlexLayoutModule,
     HomeModule,
