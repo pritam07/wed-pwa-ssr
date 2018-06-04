@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectorRef} from '@angular/core';
 import { Store } from '@ngxs/store';
 import { AddTutorial } from '../.././actions/tutorial.actions';
 import {MediaMatcher} from '@angular/cdk/layout';
