@@ -1,3 +1,55 @@
-<p>
-  signup works!
-</p>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" novalidate>
+<div class="signup-form-row">
+  <div class="signup-form-col">
+  <mat-form-field class="example-full-width">
+    <input required placeholder="Name" matInput type="text" formControlName="fullname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }" />
+    <!-- <input matInput placeholder="Email" formControlName="name"> -->
+    <mat-error *ngIf="f.fullname.hasError('required')">
+            Name is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  </div>
+  <div class="signup-form-col">
+    <mat-form-field class="example-full-width">
+    <input required placeholder="Email" matInput type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+    <!-- <input matInput placeholder="Email" formControlName="name"> -->
+    <mat-error *ngIf="f.email.hasError('required')">
+            Email is <strong>required</strong>
+    </mat-error>
+        <mat-error *ngIf="f.email.hasError('email')">
+            Email is not <strong>valid</strong>
+    </mat-error>
+  </mat-form-field>
+  </div>
+  <div class="signup-form-col">
+    <mat-form-field>
+  <mat-select placeholder="source" formControlName="createdby" required>
+    <mat-option>--</mat-option>
+    <mat-option *ngFor="let list of createdList" [value]="list">
+      {{list.viewValue}}
+    </mat-option>
+  </mat-select>
+    <mat-error *ngIf="f.createdby.hasError('required')">
+            source is <strong>required</strong>
+    </mat-error>
+  
+</mat-form-field>
+  </div>  
+  <div class="signup-form-col">
+    
+<mat-radio-group>
+  <mat-radio-button (change)="genderChange(list)" *ngFor="let list of genderList" [value]="list">{{list.viewValue}}</mat-radio-button>  
+</mat-radio-group>
+
+</div>
+<div class="signup-form-col">
+<mat-form-field class="example-full-width">
+
+  <input [max]="endDate" matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+</div>
+</div>
+
+</form>
