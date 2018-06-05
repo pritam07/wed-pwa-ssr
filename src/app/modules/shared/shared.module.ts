@@ -16,6 +16,7 @@ import { TutorialState } from '../../state/tutorial.state';
   declarations: [],
   exports: [
     CommonModule,   
+    ReactiveFormsModule,
     MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
