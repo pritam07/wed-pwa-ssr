@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuModule, MatIconModule, MatBadgeModule,MatSidenavModule,
-MatListModule, MatFormFieldModule, MatInputModule} from '@angular/material';
+MatListModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule} from '@angular/material';
 import { NgxsModule } from '@ngxs/store';
 import { TutorialState } from '../../state/tutorial.state';
 
@@ -11,7 +11,8 @@ import { TutorialState } from '../../state/tutorial.state';
     CommonModule,
     ReactiveFormsModule,
     [MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuModule, MatIconModule, MatBadgeModule, MatSidenavModule, MatListModule,
-    MatFormFieldModule, MatInputModule]
+    MatFormFieldModule, MatInputModule, MatSelectModule,
+    MatRadioModule, MatDatepickerModule, MatNativeDateModule]
   ],
   declarations: [],
   exports: [
@@ -26,7 +27,11 @@ import { TutorialState } from '../../state/tutorial.state';
     MatSidenavModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatDatepickerModule, 
+    MatNativeDateModule
   ]
 })
 export class SharedModule {}
