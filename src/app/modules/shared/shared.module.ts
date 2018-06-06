@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuModule, MatIconModule, MatBadgeModule,MatSidenavModule,
 MatListModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatRadioModule, MatDatepickerModule, MatNativeDateModule} from '@angular/material';
 import { NgxsModule } from '@ngxs/store';
+import { SignupComponent } from '../signup/signup.component';
 import { TutorialState } from '../../state/tutorial.state';
 
 @NgModule({
@@ -14,7 +15,7 @@ import { TutorialState } from '../../state/tutorial.state';
     MatFormFieldModule, MatInputModule, MatSelectModule,
     MatRadioModule, MatDatepickerModule, MatNativeDateModule]
   ],
-  declarations: [],
+  declarations: [SignupComponent],
   exports: [
     CommonModule,   
     ReactiveFormsModule,
