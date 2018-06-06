@@ -32,7 +32,8 @@ import { TutorialState } from '../../state/tutorial.state';
     MatSelectModule,
     MatRadioModule,
     MatDatepickerModule, 
-    MatNativeDateModule
+    MatNativeDateModule,
+    SignupComponent
   ]
 })
 export class SharedModule {}
